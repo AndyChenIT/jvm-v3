@@ -2,7 +2,7 @@ package org.fenixsoft.jvm.chapter3;
 
 /**
  * testGC()方法执行后，objA和objB会不会被GC呢？
- *
+ * -XX:+PrintGCDetails -XX:+PrintGCTimeStamps
  * @author zzm
  */
 public class ReferenceCountingGC {
@@ -25,7 +25,11 @@ public class ReferenceCountingGC {
         objA = null;
         objB = null;
 
-        // 假设在这行发生GC，objA和objB是否能被回收？
+        // 假设在这行发生GC，objA和objB是否能被回收？ java使用是可达性分析算法来判断对象存活情况的。
         System.gc();
+    }
+
+    public static void main(String[] args) {
+        testGC();
     }
 }

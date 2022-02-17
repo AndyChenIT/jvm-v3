@@ -12,7 +12,7 @@ public class FinalizeEscapeGC {
     public static FinalizeEscapeGC SAVE_HOOK = null;
 
     public void isAlive() {
-        System.out.println("yes, i am still alive :)");
+        System.out.println("yes, i am still alive :).SAVE_HOOK不为空？-" + (SAVE_HOOK != null));
     }
 
     @Override
