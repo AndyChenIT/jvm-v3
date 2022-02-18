@@ -5,7 +5,11 @@ import java.util.Set;
 
 /**
  * VM Args：-XX:PermSize=6M -XX:MaxPermSize=6M
- *
+ * jdk8: -XX:MetaspaceSize=10M -XX:MaxMetaspaceSize=10M
+ * -XX:+PrintGC
+ * -XX:+PrintGCDetails
+ * -XX:+PrintHeapAtGC
+ * -XX:+PrintGCApplicationStoppedTime
  * @author zzm
  */
 public class RuntimeConstantPoolOOM_1 {
