@@ -33,7 +33,7 @@ public class ClassLoaderTest {
                 }
             }
         };
-
+        ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
         Object obj = myLoader.loadClass("org.fenixsoft.jvm.chapter7.ClassLoaderTest").newInstance();
 
         System.out.println(obj.getClass());

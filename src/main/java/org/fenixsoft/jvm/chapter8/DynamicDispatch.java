@@ -29,6 +29,7 @@ public class DynamicDispatch {
         Human woman = new Woman();
         man.sayHello();
         woman.sayHello();
+
         man = new Woman();
         man.sayHello();
     }
